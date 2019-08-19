@@ -19,6 +19,9 @@ public class Program {
                         &&  intervalB.getFromNumber() < intervalA.getToNumber()
                         &&  intervalA.getToNumber() < intervalB.getToNumber())
                     counter++;
+                else if(intervalA.getFromNumber() < intervalB.getFromNumber()
+                        &&  intervalB.getToNumber() < intervalA.getToNumber())
+                    counter++;
             }
         }
         return counter;
