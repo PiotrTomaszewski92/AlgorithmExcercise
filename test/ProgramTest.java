@@ -3,6 +3,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ProgramTest {
@@ -55,6 +56,13 @@ public class ProgramTest {
         );
         int result = program.getDisjoinIntervals(intervalList);
         Assert.assertEquals(1,result);
+    }
+
+    @Test
+    public void getResultWhentListIsEmptyTest(){
+        List<Interval> intervalList = new ArrayList<>();
+        int result = program.getDisjoinIntervals(intervalList);
+        Assert.assertEquals(0,result);
     }
 
 
