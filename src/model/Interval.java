@@ -1,6 +1,6 @@
 package model;
 
-public class Interval {
+public class Interval implements Comparable{
 
     private int fromNumber;
     private int toNumber;
@@ -21,5 +21,13 @@ public class Interval {
     @Override
     public String toString() {
         return "Interval [ " + fromNumber + ", " + toNumber + " ]";
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        int compareResult = this.fromNumber - ((Interval) o).fromNumber;
+        if(compareResult == 0)
+            compareResult = this.toNumber - ((Interval) o).toNumber;
+        return compareResult;
     }
 }

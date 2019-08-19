@@ -13,6 +13,7 @@ public class Main {
                 new Interval(7,9)
         );
 
-        program.getDisjoinIntervals(intervalList);
+        int result = program.getDisjoinIntervals(intervalList);
+        System.out.println(result);
     }
 }
