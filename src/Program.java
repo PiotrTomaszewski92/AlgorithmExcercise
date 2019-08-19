@@ -11,8 +11,8 @@ public class Program {
 
     private int getJoinIntervals(List<Interval> intervalList){
         int counter = 0;
-        for(int i = 0 ; i < intervalList.size(); i++){
-            for (int j = i; j < intervalList.size(); j++){
+        for(int i = 0 ; i < intervalList.size()-1; i++){
+            for (int j = i+1; j < intervalList.size(); j++){
                 Interval intervalA = intervalList.get(i);
                 Interval intervalB = intervalList.get(j);
                 if(intervalA.getFromNumber() < intervalB.getFromNumber()
